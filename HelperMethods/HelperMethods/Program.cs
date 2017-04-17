@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,49 +22,17 @@ namespace HelperMethods
             Console.Write("In what city were you born?");
             string city = Console.ReadLine();
 
-            /*
-            char[] firstNameArray = firstName.ToCharArray();
-            Array.Reverse(firstNameArray);
-
-            char[] lastNameArray = lastName.ToCharArray();
-            Array.Reverse(lastNameArray);
-
-            char[] cityArray = city.ToCharArray();
-            Array.Reverse(cityArray);
-
-            string result = "";
-
-            foreach (char item in firstNameArray)
-            {
-                result += item;
-            }
-
-            result += " ";
-
-            foreach (char item in lastNameArray)
-            {
-                result += item;
-            }
-
-            result += " ";
-
-            foreach (char item in cityArray)
-            {
-                result += item;
-            }
-
-            Console.WriteLine("Results: " + result);
-            */
             Console.Write("Result: ");
-            ReverseString(firstName);
-            ReverseString(lastName);
-            ReverseString(city);
-
+            DisplayResult(ReversedString(firstName),
+            ReversedString(lastName),
+            ReversedString(city));
+            //DisplayResult(ReversedString(firstName) + " " + ReversedString(lastName) + " " + ReversedString(city));
+            //DisplayResult(ReversedString(firstName));
             Console.ReadLine();
 
         }
 
-        private static string ReverseString(string message)
+        private static string ReversedString(string message)
         {
             
             char[] messageArray = message.ToCharArray();
@@ -72,5 +40,16 @@ namespace HelperMethods
             return string.Concat(messageArray);
         }
 
+        private static void DisplayResult(string ReversedFirstName, string ReversedLastName, string ReversedCity)
+        {
+            Console.Write(ReversedFirstName + " ");
+            Console.Write(ReversedLastName + " ");
+            Console.Write(ReversedCity);
+        }
+
+        private static void DisplayResult(string Message)
+        {
+            Console.Write(Message);
+        }
     }
 }
