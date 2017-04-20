@@ -79,15 +79,12 @@ namespace WhileIteration
                 guesses++;
 
                 if (result == randomNumber.ToString())
-                {
                     incorrect = false;
-                }
                 else
-                {
                     Console.WriteLine("Wrong!");
-                }
 
             } while (incorrect);
+
             Console.WriteLine("Correct! It took you {0} guesses", guesses);
             Console.ReadLine();
         }
