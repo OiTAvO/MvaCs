@@ -42,8 +42,6 @@ namespace UnderstandingScope
         static void HelperMethod()
         {
             Console.WriteLine("Value of k from de HelperMethod(): " + k);
-
-
         }
     }
 
