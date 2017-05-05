@@ -43,6 +43,7 @@ namespace UnderstandingScope
         {
             Console.WriteLine("Value of k from de HelperMethod(): " + k);
 
+
         }
     }
 
