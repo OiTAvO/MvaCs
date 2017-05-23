@@ -28,6 +28,8 @@ namespace EnumsAndSwitch
                 new Todo { Description = "Task 14", EstimatedHours = 6, Status = Status.Completed }
             };
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
             PrintAssessment(todos);
             Console.ReadLine();
 
@@ -37,7 +39,28 @@ namespace EnumsAndSwitch
         {
             foreach (var todo in todos)
             {
-
+                switch (todo.Status)
+                {
+                    case Status.NotStarted:
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        break;
+                    case Status.InProgress:
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+                        break;
+                    case Status.OnHold:
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        break;
+                    case Status.Completed:
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        break;
+                    case Status.Deleted:
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        break;
+                }
+                Console.WriteLine(todo.Description);
             }
         }
     }
